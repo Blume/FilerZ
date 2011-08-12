@@ -6,6 +6,25 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="./style/stylesheet.css" type="text/css" media="screen" />
 	<link type='text/css' href='./modalbox/modalbox_style.css' rel='stylesheet' media='screen' />
+	<script type="text/javascript">
+	function ajax(uid) {
+		var req;
+	 	try {
+			req = window.XMLHttpRequest?new XMLHttpRequest(): 
+				new ActiveXObject("Microsoft.XMLHTTP"); 
+		} catch (e) {
+			alert("Dein Browser unterst&uuml;tzt kein AJAX!");
+		}
+
+		req.onreadystatechange = function() {
+			if ((req.readyState == 4) && (req.status == 200)) { 
+				document.getElementById("status").innerHTML = req.responseText;
+			}
+		}
+		req.open('GET', 'status.php?uid='+uid);
+		req.send(null);
+	}
+	</script>
 	<script type="text/javascript" src="./ajax/js/ajax_json2.stringify.js"></script>
 	<script type="text/javascript" src="./ajax/js/ajax_json_stringify.js"></script>
 	<script type="text/javascript" src="./ajax/js/ajax_json_parse_state.js"></script>
@@ -23,6 +42,7 @@
 			<form action="upload.php" method="post" enctype="multipart/form-data">
 				<label for="inputFile">Datei</label>
 				<input name="inputFile" type="file" size="50" maxlength="100000" accept="*"><br /><br />
+				<div id="status"></div>
 				<input type="submit" value="Hochladen" />
 			</form>
 		</div>
