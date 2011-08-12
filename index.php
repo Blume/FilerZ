@@ -38,12 +38,13 @@
 	<div class="content" style="margin-left: 16px;">
 		<img src="./style/logo.png" />
 		<br /><br />
+		<iframe src="upload.php" name="hidden_upload" style="display:none"></iframe>
+		<div id="status"></div>
 		<div>
-			<form action="upload.php" method="post" enctype="multipart/form-data">
-				<label for="inputFile">Datei</label>
-				<input name="inputFile" type="file" size="50" maxlength="100000" accept="*"><br /><br />
-				<div id="status"></div>
-				<input type="submit" value="Hochladen" />
+			<form action="upload.php" target="hidden_upload" method="post" enctype="multipart/form-data">
+				<input type="hidden" name="APC_UPLOAD_PROGRESS" value="<?php echo uniqid();?>"/>
+				<input type="file" name="upload" />
+				<input type="submit" onclick="this.disabled=true; setTimeout('ajax(\''+this.form.APC_UPLOAD_PROGRESS.value+'\')', 750); "/>
 			</form>
 		</div>
     </div>
