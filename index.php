@@ -5,6 +5,7 @@
 	<title>FilerZ Datei Hosting</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="./style/stylesheet.css" type="text/css" media="screen" />
+	<link type='text/css' href='./modalbox/modalbox_style.css' rel='stylesheet' media='screen' />
 	<script type="text/javascript" src="./ajax/js/ajax_json2.stringify.js"></script>
 	<script type="text/javascript" src="./ajax/js/ajax_json_stringify.js"></script>
 	<script type="text/javascript" src="./ajax/js/ajax_json_parse_state.js"></script>
@@ -27,6 +28,10 @@
 		</div>
     </div>
 </div>
+
+<script type='text/javascript' src='./modalbox/modalbox_jquery.js'></script>
+<script type='text/javascript' src='./modalbox/modalbox_jquery.simplemodal.js'></script>
+<script type='text/javascript' src='./modalbox/modalbox_osx.js'></script>
 
 </body>
 </html>
