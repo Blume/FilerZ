@@ -1,16 +1,9 @@
-<?php include("./ajax_php.php"); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>FilerZ Datei Hosting</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="./style/stylesheet.css" type="text/css" media="screen" />
-	<script type="text/javascript" src="./ajax/js/ajax_json2.stringify.js"></script>
-	<script type="text/javascript" src="./ajax/js/ajax_json_stringify.js"></script>
-	<script type="text/javascript" src="./ajax/js/ajax_json_parse_state.js"></script>
-	<script type="text/javascript" src="./ajax/js/ajax_sajax.js"></script>
-	<script type="text/javascript"><?php sajax_show_javascript(); ?></script>
-	<script type="text/javascript" src="./ajax_js.js"></script>
 </head>
 <body>
 
